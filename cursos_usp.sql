@@ -13,4 +13,14 @@ INSERT INTO Cursos (nome, area, concorrencia) VALUES
 ('Audiovisual', 'Humanas', 32.3),
 ('Publicidade e Propaganda', 'Humanas', 28.6);
 
-SELECT * FROM Cursos;
+SELECT *
+FROM  Cursos
+ORDER BY concorrencia ASC;
+
+SELECT area, COUNT(*) AS total_cursos
+FROM Cursos
+GROUP BY area;
+
+SELECT area, AVG (concorrencia) AS media_concorrencia
+FROM Cursos
+GROUP BY area;
